@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Blog - Copias de Seguridad</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #f4f9ff;
+        color: #333;
+    }
+
+    header {
+        background-color: #0b5ed7;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    nav {
+        background-color: #198754;
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    section {
+        padding: 20px;
+        margin: 20px;
+        background-color: white;
+        border-left: 6px solid #0b5ed7;
+        border-radius: 5px;
+    }
+
+    h2 {
+        color: #0b5ed7;
+    }
+
+    footer {
+        background-color: #198754;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    .highlight {
+        color: #198754;
+        font-weight: bold;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Copias de Seguridad en Bases de Datos</h1>
+    <p>Importancia, tipos y procesos esenciales</p>
+</header>
+
+<nav>
+    <a href="#importancia">Importancia</a>
+    <a href="#tipos">Tipos</a>
+    <a href="#restauracion">Restauración</a>
+    <a href="#sql">SQL</a>
+</nav>
+
+<section id="importancia">
+    <h2>📌 Importancia de las Copias de Seguridad</h2>
+    <p>
+        Las copias de seguridad son fundamentales porque garantizan la 
+        <span class="highlight">continuidad del negocio</span>.
+    </p>
+    <p>
+        Permiten recuperar información ante fallos de hardware, errores humanos,
+        ataques como ransomware o desastres naturales.
+    </p>
+</section>
+
+<section>
+    <h2>🛡️ Planes de Prevención</h2>
+    <ul>
+        <li>Realizar copias periódicas</li>
+        <li>Automatizar los respaldos</li>
+        <li>Usar almacenamiento local y en la nube</li>
+        <li>Probar restauraciones regularmente</li>
+    </ul>
+</section>
+
+<section id="tipos">
+    <h2>📊 Tipos de Copias de Seguridad</h2>
+    <ul>
+        <li><span class="highlight">Completa:</span> Copia total de la base de datos</li>
+        <li><span class="highlight">Incremental:</span> Solo cambios recientes</li>
+        <li><span class="highlight">Diferencial:</span> Cambios desde la última copia completa</li>
+    </ul>
+</section>
+
+<section id="restauracion">
+    <h2>🔄 Restauración y Recovery</h2>
+    <p>
+        La <span class="highlight">restauración</span> consiste en recuperar los datos desde un backup.
+    </p>
+    <p>
+        El <span class="highlight">recovery</span> asegura que la base de datos sea consistente usando logs.
+    </p>
+
+    <h3>Tipos de Restauración</h3>
+    <ul>
+        <li>Completa: toda la base de datos</li>
+        <li>Por archivos: partes específicas</li>
+        <li>Por páginas: errores puntuales</li>
+    </ul>
+</section>
+
+<section>
+    <h2>⚖️ Diferencia: Restauración vs Recovery</h2>
+    <p><strong>Restauración:</strong> copia física de datos desde el backup.</p>
+    <p><strong>Recovery:</strong> proceso lógico que asegura consistencia.</p>
+</section>
+
+<section id="sql">
+    <h2>💾 Comandos SQL Básicos</h2>
+
+    <h3>Backup</h3>
+    <pre>
+BACKUP DATABASE nombre_bd
+TO DISK = 'ruta.bak'
+WITH DIFFERENTIAL;
+    </pre>
+
+    <h3>Restore</h3>
+    <pre>
+RESTORE DATABASE nombre_bd
+FROM DISK = 'ruta.bak'
+WITH RECOVERY;
+    </pre>
+</section>
+
+<section>
+    <h2>📌 Conclusión</h2>
+    <p>
+        Las copias de seguridad son esenciales para proteger la información.
+        Implementar buenas prácticas garantiza seguridad, disponibilidad e integridad de los datos.
+    </p>
+</section>
+
+<footer>
+    <p>Blog académico - Copias de Seguridad | 2025</p>
+</footer>
+
+</body>
+</html>
